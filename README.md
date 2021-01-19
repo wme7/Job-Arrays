@@ -1,2 +1,2 @@
 # Jobs-Arrays
-Prototype for submiting an array of jobs on a Torque/PBS and Slurm cluster partitioner
+A minimalistyc set of bash scripts for submiting jobs-array on Torque/PBS and Slurm cluster partitioners.
