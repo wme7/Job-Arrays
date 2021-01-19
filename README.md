@@ -10,6 +10,7 @@ This is the [job array submition script](/src/arrayTest.pbs). The parameters in 
 Here, I use the [create_inputFiles.sh](/src/create_inputFiles.sh) to build example input file for each subprocess
 * `step three: submit the job.` using a simple [bash script](/src/submit_JobArray.sh) we submit the job array, capture the job-ID, and monitor the completition of the entire batch. One it finishes, the script returns control to --wherever-- it was called.
 
-Happy codding !
+Happy coding !
 
 Manuel A. Diaz
+Pprime - ENSMA 01/2021
