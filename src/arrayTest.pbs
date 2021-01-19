@@ -1,0 +1,18 @@
+#PBS -S /bin/bash
+#PBS -N arrayTest
+#PBS -j oe
+#PBS -o arrayTest.out
+#PBS -l select=1:ncpus=1:mpiprocs=1
+#PBS -l walltime=2:00:00
+#PBS -l pmem=2gb
+#PBS -J 1-10
+
+cd ${PBS_O_WORKDIR}
+
+# On Thor supercomputer:
+module load codes/python/3.6.4
+
+echo "PBS Job Id PBS_JOBID is ${PBS_JOBID}"
+echo "PBS job array index PBS_ARRAY_INDEX value is ${PBS_ARRAY_INDEX}"
+
+python3 ./arrayTest.py file-${PBS_ARRAY_INDEX}.txt > output-${PBS_ARRAY_INDEX}.out
